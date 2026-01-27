@@ -1,1 +1,0 @@
-# sinakhoshnaw-github.io
