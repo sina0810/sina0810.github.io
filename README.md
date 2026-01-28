@@ -1,39 +1,37 @@
-`The questions I asked AI to make my website more professional-looking: `
 
-1. Now you are playing the role of my experienced instructor, explain to me in easy and detailed why the nav bar gets over flown by the the project cards when I hover over it ?
+1. Share one technical concept that you developed greater mastery over in this project. Demonstrate how you understand that concept by sharing your mental model of the concept. Then, show how you used that concept in your project?
 
- **AI response:** 
-- This happens because the project cards use transform: translateY(-5px) on hover. A CSS transform moves the element visually but does not affect the layout of the page. That means the card shifts upward without pushing other elements, so it can slide into the navbar’s space.
+- One technical concept I became much better at during this project is CSS layout using Flexbox and responsiveness.
+- Now when I want to organize items I ask myself do I want them to be on the X line or Y line(rows or columns). 
 
-- Also, when transform is applied, the element creates its own stacking context. If the navbar does not have a higher z-index, the hovered card can appear on top of it.
+- Alos, I can comfortably deside how much space I need between each items, how the layout should look like when the screan size change.
+I used this concept a lot in my portfolio website. For example:
 
-- The fix is to give the navbar a positioning value (like position: relative or fixed) and assign it a higher z-index. This keeps the navbar above the project cards while still allowing the hover animation to work correctly.
-
-
-**My keytake away from this:**
--I gave the`transform: translateY(-5px)` for the hover to `.project-card:hover` inside the project section.
-
-- Also, I added `z-index: 1000;` to the **navbar** so it will keep it above the project cards.  
-
-2. How can I know when do I need a div, and when do I need div inside of another div ?
-
- **AI response:**
-- A div is used to group elements together so they can be styled, positioned, or controlled as one unit.
-
-- Use one div when multiple elements belong together visually and should move or behave together (for example, a card that contains a title and text).
-
-- Use a div inside another div when different parts of a section have different layout or styling responsibilities.
-The outer div usually controls the overall layout (like flexbox or grid), while the inner divs control specific parts (like text, images, or buttons).
-
-- Each div should have one clear job. If a div doesn’t control layout, spacing, or structure, it’s probably unnecessary.
+- I used flex-direction: column to stack content when the screan size shrinks and I used Flexbox to align my navigations links in the navbar on one line. 
+- I also learned how hover effects and transforms can affect layout and overlap other elements, for example: One of the project card inside of the project section used to overlap the navbar when I was hovering over them. I learned how Flexbox, spacing, and hovering all work together. This hleped me to make more responsive, and more professional-looking website.
 
 
-3. What height: 100vh; does and when do I need to use it in CSS? 
 
- **AI response:**
-- height: 100vh means an element takes up the full height of the visible screen. The vh unit is based on the viewport, where 1vh equals 1% of the browser’s height, so 100vh always fills the screen no matter the device. This is commonly used for full-screen sections like hero areas or scroll-based layouts where each section should fit exactly one screen. It should be used carefully, because content-heavy sections can overflow, especially on mobile devices, where using min-height: 100vh is often safer.
 
-**My keytake away from this:**
-- I changed the height of each sections to `height: 100vh:` to take the full height of the screan. 
+2. Choose one project requirement that you found challenging and are proud of implementing. Describe what made it challenging and how you were able to implement the requirement by walking through your code as succinctly as possible. Remember that your audience does not know your code nearly as well as you do so you’ll have to break it down in a logical manner for them to quickly understand it.
 
-- Now, when the user look at my website it showes the full screan of the section makes it easier to navigate through the page, and made the screan scroll a lot better.  
+- One project requirement I found challenging but after all I'm very proud of is that making my sections fully responsive. 
+- Especially when the screan size gets smaller it took me some time to make it responsive to stack over each other. 
+- This was challenging because at first my layout either:
+- stacked correctly but never moved side-by-side, or they were over flowing each others. 
+
+- Another thing that I also struggled with, was the elements overflowing or not lining up the way I expected.
+- I had to broke the problem down step by step, for example:
+- First, I created a *container*. That helped me to control their layout together instead of making different div to work with them separately.
+
+
+3. How did you leverage AI to assist your development of this project?
+
+- I used AI as a learning and problem-solving partner throughout this project, not as a shortcut. Each times I found myself strugling with the concepts, I asked AI to explain it to me and how to make it better. I used AI mostly to make responsive layouts. That helped me understand why something wasn’t working instead of just copying a fix.
+
+- Most importantly, AI helped me to relize once the html structured in easy way it would be a lot easier to use CSS to layout the elements. That process made me more confident in what I built, because I understood the decisions behind it rather than just making it. 
+
+
+
+This project provided me an opportunity to build something with AI assistance. Check out my [AI Usage Document](https://docs.google.com/document/d/1FxVGO0RRTlRONaQ7lKTSCn_AvMXnK_VzshHs19OcM8M/edit?usp=sharing) to see how I used AI on this project.
+
