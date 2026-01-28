@@ -2,7 +2,6 @@
     --text-color: white;
     --primary-color: #6366f1;
     --sprimary-color:  rgb(231, 23, 148);
-    /* --text-color: #1a1a1a; */
     --link-color: rgb(41, 41, 241);
     --background-color: rgb(0, 0, 0);
 }
@@ -21,7 +20,9 @@
     background-color: var(--background-color);
     scroll-behavior: smooth;
     --text-color: white;
+    
  }
+
 
  a {
     color: var(--link-color);
@@ -67,12 +68,13 @@ nav .left a{
 
 /* section 1 */
 #home{
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 85px 0px;
+
 }
 
 section .profile-img{
@@ -82,8 +84,8 @@ section .profile-img{
     align-items: center;
     justify-content: center;
     border-radius: 53%;
-    border: 3px solid rgb(118, 118, 228);
-    box-shadow: 3px 4px 4px  rgb(231, 23, 148);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0px 5px 27px  var(--sprimary-color);
 }
 
 
@@ -104,35 +106,35 @@ section .profile-img{
     font-size: 22px;
 }
 #home .p1, .p2 span{
-    color: rgb(231, 23, 148);
+    color: var(--sprimary-color);
 }
 
 #home .project, .contact{
     border-radius: 50px;
     padding: 22px;
     font-size: 18px;
-    background-color: #6366f1;
+    background-color: var(--primary-color);
     color: var(--text-color);
     border: none;
     margin: 0px 6px;
 }
 #home .contact:hover{
-    box-shadow: 3px 2px 4px rgb(231, 23, 148);
+    box-shadow: 3px 2px 4px var(--sprimary-color);
         cursor: pointer;
         background-color: #ffffff;
-        border: 2px solid #6366f1;
+        border: 2px solid var(--primary-color);
         color: black;
         transition: 0.2s;
         transform: scale(1.1);
 
 }
 #home .project:hover{
-     box-shadow: 3px 2px 4px rgb(231, 23, 148);
+     box-shadow: 3px 2px 4px var(--sprimary-color);
      background-color: #ffffff;
-     border: 2px solid #6366f1;
+     border: 2px solid var(--primary-color);
      transition: 0.2s;
     transform: scale(1.1);
-    color: black;
+    color: var(--background-color);
 }
 
 
@@ -142,26 +144,32 @@ section .profile-img{
      padding: 0px 30px;
     color: var(--text-color);
     min-height: 100vh;
-    background-color: red;
+    scroll-snap-align: start;
 }
+
 .about-section{
     display: flex;
     color: var(--text-color);
     gap: 45px;
     align-items: center;
     justify-content: center;
-    background-color: #6366f1;
+    background-color: red;
 
 }
-
+@media (min-width: 900px) {
+    .about-content {
+        flex-direction: row;
+        gap: 60px;
+    }
+}
 .about-img{
-    margin: 0 auto;
-    border: 3px solid #6366f1;
-    box-shadow: 4px 4px 20px rgb(231, 23, 148);
+    border: 3px solid var(--primary-color);
+    box-shadow: 4px 4px 20px var(--sprimary-color);
     max-width: 400px;
     max-height: 400px;
+
 }
-.about-img > img {
+.about-img  img {
     width: 100%;
 }
 
@@ -174,7 +182,7 @@ p{
 
 .skills h3{
     margin-bottom: 17px;
-    box-shadow: 2px 5px 30px  #6366f1;
+    box-shadow: 2px 5px 30px  var(--primary-color);
     padding: 12px;
     border-radius: 12px;
 }
@@ -187,12 +195,12 @@ p{
 .skill-list li{
     padding: 9px 18px;
     background-color: var(--background-color);
-    border: 1px solid rgb(231, 23, 148);
+    border: 1px solid var(--sprimary-color);
     border-radius: 50px;
 }
 .skill-list li:hover{
     cursor: pointer;
-    box-shadow: 2px 3px 3px  #6366f1;
+    box-shadow: 2px 3px 3px  var(--primary-color);
     transform: scale(1.1);
     transition: 0.5s;
 }
@@ -203,6 +211,8 @@ p{
     min-height: 90vh;
     color: var(--text-color);
     overflow: hidden;
+    scroll-snap-align: start;
+
 }
 h2{
     color: var(--text-color);
@@ -211,7 +221,7 @@ h2{
 }
 .project-section{
     display: grid;
-    margin: 0px 60px;
+    margin: 60px 60px;
     gap: 30px;
 }
 .project-card{
@@ -261,10 +271,12 @@ h2{
 /* section 4 */
 
 #contact{
-    
+    height: 90vh;
     margin-bottom: 100px;
-     padding: 80px 30px;
+     padding: 0px 30px;
     color: var(--text-color);
+    scroll-snap-align: start;
+
 }
 section h2{
     margin-bottom: 40px;
@@ -310,12 +322,12 @@ section h2{
     font-family: 'poppns', sans-serif;
 }
 .form-buttun{
-    background-color: #6366f1;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     cursor: pointer;
 }
 .form-buttun:hover{
-    box-shadow: 4px 4px 20px rgb(231, 23, 148);
+    box-shadow: 4px 4px 20px var(--sprimary-color);
     transform: scale(1.05);
     transition: 0.3s;
 }
@@ -326,10 +338,6 @@ section h2{
     border-radius: 50px;
     transition: all 0.3s ease;
 }
-/* .contact-info{
-    display: flex;
-    flex-direction: column;
-} */
 
 .contact-info h3{
     font-size: 22px;
@@ -348,10 +356,10 @@ section h2{
     font-size: 19px;
 }
 .contact-links a:hover{
-    box-shadow: 3px 3px 13px rgb(231, 23, 148);
+    box-shadow: 3px 3px 13px var(--sprimary-color);
     transform: scale(1.05);
     transition: 0.5s;
-    border:1px solid #6366f1;
+    border:1px solid var(--primary-color);
     border-radius: 20px ;
     color: var(--text-color);
 
@@ -368,9 +376,12 @@ ul{
 #contact,
 #about {
     scroll-margin-top: 90px;
+    
 }
 
-
+footer p{
+    color: var(--text-color);
+}
 @media(max-width: 600px){
     /* NAVBAR */
     nav{
@@ -407,6 +418,7 @@ ul{
 
 @media (min-width: 600px) {
     .project-section {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        
     }
 }
