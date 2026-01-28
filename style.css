@@ -141,10 +141,9 @@ section .profile-img{
 
 /* Section 2 */
 #about{
-     padding: 0px 30px;
+     padding: 0px 80px;
     color: var(--text-color);
     min-height: 100vh;
-    scroll-snap-align: start;
 }
 
 .about-section{
@@ -153,31 +152,33 @@ section .profile-img{
     gap: 45px;
     align-items: center;
     justify-content: center;
-    background-color: red;
 
 }
-@media (min-width: 900px) {
-    .about-content {
-        flex-direction: row;
-        gap: 60px;
-    }
-}
+
 .about-img{
+    display: flex;
     border: 3px solid var(--primary-color);
     box-shadow: 4px 4px 20px var(--sprimary-color);
-    max-width: 400px;
-    max-height: 400px;
+    width: 100%;
 
 }
 .about-img  img {
     width: 100%;
+    height: 90%;
+    align-items: center;
 }
 
 p{
-    margin-bottom: 44px;
-}
-.about-text p{
+    margin-bottom: 33px;
     line-height: 1.7;
+}
+.about-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.about-text .about-bio{
+    width: 74%;
 }
 
 .skills h3{
@@ -413,12 +414,17 @@ footer p{
     justify-content: space-between;
     
 }
+.project-section{
+    grid-template-columns: 1fr;
+}
 } 
-/* section 3 */
+/* section 4 */
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
     .project-section {
-        grid-template-columns:1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         
     }
+    /* section 2 */
+  
 }
